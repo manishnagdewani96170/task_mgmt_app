@@ -1,24 +1,61 @@
-# README
+Welcome to Task Management App!
+===================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setting up the development environment
 
-Things you may want to cover:
+1. Get the code. Cloning this git repo is probably easiest way:
 
-* Ruby version
+  ```bash
+  git@github.com:manishnagdewani96170/task_mgmt_app.git
+  ```
 
-* System dependencies
+1. Navigate to the Taskapp project root directory.
 
-* Configuration
+  ```bash
+  cd taskapp
+  ```
 
-* Database creation
+1. Install the required gems by running the following command in the project root directory:
 
-* Database initialization
+  ```bash
+  bundle install
+  ```
 
-* How to run the test suite
+1. Create a database.yml file by copying the example database configuration:
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```bash
+  cp config/database.example.yml config/database.yml
+  ```
 
-* Deployment instructions
+1. Add your database configuration details to `config/database.yml`. You will probably only need to fill in the password for the database(s).
 
-* ...
+1. Create the database:
+
+  ```bash
+  bundle exec rake db:create
+  ```
+### Instructions for application after setup
+
+1. Create an user if you did not sign-up till yet using following link:
+
+  ```bash
+  http://localhost:3000/users/sign_up
+  ```
+1. After sign-up you would redirect to task index page where you can delete, create and show task and if yo don't have any task you can  create task using below link:
+
+  ```bash
+  http://localhost:3000/tasks/new
+  ```
+1. After create task on new page you can edit task detail on that page.
+
+1. If you want edit profile you can use below link:
+
+  ```bash
+  http://localhost:3000/users/edit
+  ```
+1. If you want log-out you can use below link:
+
+  ```bash
+  http://localhost:3000/users/sign_out
+  ```
+
